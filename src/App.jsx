@@ -5,7 +5,8 @@ import About from './pages/About';
 import Blogs from './pages/Research/Blogs';
 import Contact from './pages/Contact';
 import Login from './pages/Login';
-import Blog from './pages/Research/Blog'; 
+import Blog from './pages/Research/Blog';
+import Logo from './assets/anthropic.png' 
 
 // 1. Move the Hero content to a separate component
 const Home = () => (
@@ -41,7 +42,7 @@ function App() {
       <nav className="navbar">
         <div className="logo">
           <Link to="/">
-            <img src="/src/assets/anthropic.png" alt="Logo" />
+            <img src={Logo} alt="Logo" />
           </Link>
         </div>
         <div className="nav-links">
