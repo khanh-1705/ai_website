@@ -1,0 +1,16 @@
+[
+  {
+    "id": "safety-frontiers",
+    "title": "AI Safety at the Frontiers",
+    "date": "March 22, 2026",
+    "excerpt": "Exploring the boundaries of model interpretability.",
+    "content": "Full research text goes here..."
+  },
+  {
+    "id": "claude-3-launch",
+    "title": "Introducing Claude 3",
+    "date": "March 15, 2026",
+    "excerpt": "A new generation of steerable AI systems.",
+    "content": "Detailed technical specs..."
+  }
+]
