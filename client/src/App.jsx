@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import About from './pages/About';
 import Blogs from './pages/Research/Blogs';
 import Contact from './pages/Contact';
-import Login from './pages/Login';
+import Admin from './pages/AdminPanel';
 import Blog from './pages/Research/Blog';
 import Logo from './assets/anthropic.png' 
 
@@ -15,8 +15,12 @@ const Home = () => (
       <h1 className="reveal-text">AI research and products that put safety at the frontier.</h1>
       <p className="fade-in">Anthropic is an AI safety and research company that’s working to build reliable, interpretable, and steerable AI systems.</p>
       <div className="cta-group">
-        <button className="btn-primary">Try Claude</button>
-        <button className="btn-text">Read our research →</button>
+        <button className="btn-primary">
+          <a href="https://github.com/khanh-1705/ai_website.git">Try Claude</a>
+        </button>
+        <button className="btn-text">
+          <Link to="/research">Read our research →</Link>
+        </button>
       </div>
     </div>
   </main>
@@ -49,7 +53,7 @@ function App() {
           <Link to="/about">About</Link>
           <Link to="/research">Research</Link>
           <Link to="/contact">Contact</Link>
-          <Link to="/login" className="btn-secondary">Log in</Link>
+          <Link to="/admin" className="btn-secondary">Admin</Link>
         </div>
       </nav>
 
@@ -58,12 +62,10 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/research" element={<Blogs />} />
-        
-        {/* THIS IS THE DYNAMIC JUMP */}
           <Route path="/research/:id" element={<Blog />} />
         
         <Route path="/contact" element={<Contact />} />
-        <Route path="/login" element={<Login />} />
+        <Route path="/admin" element={<Admin />} />
       </Routes>
     </Router>
   );
