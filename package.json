@@ -5,8 +5,12 @@
   },
   "scripts": {
     "dev": "concurrently \"cd server && nodemon server.js\" \"cd client && npm run dev\"",
-    "build": "concurrently \"cd server && nodemon server.js\" \"cd client && npm run build\"",
+    "build": "cd client && npm install && npm run build",
+    "start": "node server/server.js",
     "lint": "eslint .",
     "preview": "vite preview"
+  },
+  "dependencies": {
+    "dotenv": "^17.4.2"
   }
 }
