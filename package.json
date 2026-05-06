@@ -5,7 +5,7 @@
   },
   "scripts": {
     "dev": "concurrently \"cd server && nodemon server.js\" \"cd client && npm run dev\"",
-    "build": "vite build",
+    "build": "concurrently \"cd server && nodemon server.js\" \"cd client && npm run build\"",
     "lint": "eslint .",
     "preview": "vite preview"
   }
