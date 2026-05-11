@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "concurrently \"cd server && nodemon server.js\" \"cd client && npm run dev\"",
     "build": "cd client && npm install && npm run build",
-    "start": "node server/server.js",
+    "start": "node server.js",
     "lint": "eslint .",
     "preview": "vite preview"
   },
